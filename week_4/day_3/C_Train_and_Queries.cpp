@@ -8,7 +8,7 @@ void result(){
     int n, r;
     cin>>n>>r;
 
-    unordered_map<int, int>p,q;
+    map<int, int>p,q;
     for(int i=0; i<n; i++){
         int x;
         cin>>x;
