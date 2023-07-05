@@ -13,7 +13,7 @@ void result(){
         j--;
     }
     cout<<s;
-    for(int i=j+1; i<9; i++){
+    for(int i=j+1; i<=9; i++){
         cout<<i;
     }
     cout<<"\n";
