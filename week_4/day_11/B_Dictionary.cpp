@@ -5,18 +5,19 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    int s, j=9;
+    string s;
     cin>>s;
 
-    while(s > j){
-        s = s-j;
-        j--;
+    ll n = s[0] - 'a';
+
+    ll solve = (n) * 25;
+
+    if(s[0] - 'a' < s[1] - 'a'){
+        cout<<solve + s[1] - 'a'<<"\n";
     }
-    cout<<s;
-    for(int i=j+1; i<=9; i++){
-        cout<<i;
+    else{
+        cout<<solve + s[1] - 'a' + 1<<"\n";
     }
-    cout<<"\n";
     
 }
     

@@ -5,18 +5,27 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    int s, j=9;
-    cin>>s;
 
-    while(s > j){
-        s = s-j;
-        j--;
+    string s;
+    cin>>s;
+    
+    ll n = s.size();
+
+    ll ONE = 0, ZERO = n - 1;
+
+    for(ll i=0; i<n; i++){
+        if(s[i] == '1'){
+            ONE = i;
+        }
     }
-    cout<<s;
-    for(int i=j+1; i<=9; i++){
-        cout<<i;
+
+    for(ll i=n-1; i>=0; i--){
+        if(s[i] == '0'){
+            ZERO = i;
+        }
     }
-    cout<<"\n";
+    cout<<ZERO-ONE+1<<"\n";
+    return;
     
 }
     

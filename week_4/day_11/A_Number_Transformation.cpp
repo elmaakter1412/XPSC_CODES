@@ -5,18 +5,20 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    int s, j=9;
-    cin>>s;
+    int a,b,x,y;
+    cin>>x>>y;
 
-    while(s > j){
-        s = s-j;
-        j--;
+    a = y % x;
+    b = y / x;
+
+    if(a != 0){
+        cout<<0<<" "<<0<<"\n";
+        return;
     }
-    cout<<s;
-    for(int i=j+1; i<=9; i++){
-        cout<<i;
+    else{
+        cout<<1<<" "<<b<<"\n";
+        return;
     }
-    cout<<"\n";
     
 }
     

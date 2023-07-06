@@ -5,18 +5,21 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    int s, j=9;
-    cin>>s;
+    ll a,b,c,x_dogs,y_cats;
+    cin>>a>>b>>c>>x_dogs>>y_cats;
 
-    while(s > j){
-        s = s-j;
-        j--;
+    if(a < x_dogs){
+        c = c - (x_dogs - a);
     }
-    cout<<s;
-    for(int i=j+1; i<=9; i++){
-        cout<<i;
+    if(b < y_cats){
+        c = c - (y_cats - b);
     }
-    cout<<"\n";
+    if(c < 0){
+        cout<<"NO"<<"\n";
+    }
+    else{
+        cout<<"YES"<<"\n";
+    }
     
 }
     
