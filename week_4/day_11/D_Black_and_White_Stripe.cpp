@@ -28,7 +28,7 @@ void result(){
             count++;
         }
         if(count > maxx){
-            maxx == count;
+            maxx = count;
         }
         i++;
         j++;

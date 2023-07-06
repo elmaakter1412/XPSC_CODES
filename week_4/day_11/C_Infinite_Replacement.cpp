@@ -4,7 +4,7 @@
 using namespace std;
 typedef long long int ll;
 
-ll pow(ll m){
+ll power(ll m){
     ll p = 1;
     for(int i=0; i<m; i++){
         p = p*2;
@@ -25,7 +25,7 @@ void result(){
             cout<<1<<"\n";
         }
         else{
-            cout<<pow(s_n_sz)<<"\n";
+            cout<<power(s_n_sz)<<"\n";
         }
     }
     else{
@@ -34,7 +34,7 @@ void result(){
             cout<<-1<<"\n";
         }
         else{
-            cout<<pow(s_n_sz)<<"\n";
+            cout<<power(s_n_sz)<<"\n";
         }
     }
     
