@@ -15,8 +15,6 @@ void result(){
     if(n%2 == 0){
         for(int i=n; i>=1; i--){
             cout<<i<<" ";
-            // cout<<endl;
-            // return;
         }
         cout<<endl;
         return;

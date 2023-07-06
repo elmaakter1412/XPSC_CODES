@@ -22,7 +22,7 @@ void result(){
 
         }
         if(s[i] == 'g'){
-            //flag = 0;
+            flag = 0;
             maxx = max(maxx, count);
             count = 0;
         }
