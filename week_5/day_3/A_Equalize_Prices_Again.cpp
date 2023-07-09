@@ -5,29 +5,20 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    int n;
+    ll n, solve = 1, an = 1, p=0;
     cin>>n;
 
-    string s;
-    cin>>s;
-
-    int m = s.size();
-
-    for(int i=1; i<n-2; i++){
-        string ss;
-        cin>>ss;
-        if(ss[0] != s[m - 1]){
-            s = s + ss;
-        }
-        else{
-            s = ss[1];
-        }
+    vector<int>a(105);
+    for(int i=0; i<n; i++){
+        cin>>a[i];
+        p = p + a[i];
     }
 
-    while(m < n){
-        s = s + 'a';
+    for(int i=1; i<p; i++){
+        an = n*i;
+        solve = i;
     }
-    cout<<s<<"\n";
+    cout<<solve<<"\n";
     
 }
     
