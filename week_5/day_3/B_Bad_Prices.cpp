@@ -20,7 +20,7 @@ void result(){
         }
         minn = min(minn, a[i]);
     }
-    cout<<solved / n + 1<<"\n";
+    cout<<solved<<"\n";
     
 }
     

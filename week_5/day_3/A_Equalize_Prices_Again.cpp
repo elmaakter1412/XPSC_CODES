@@ -14,7 +14,7 @@ void result(){
         p = p + a[i];
     }
 
-    for(int i=1; i<p; i++){
+    for(int i=1; an<p; i++){
         an = n*i;
         solve = i;
     }
