@@ -5,10 +5,7 @@ using namespace std;
 typedef long long int ll;
 ll n, a[200005], ans, even, even1, odd, odd1;
     
-int main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-
+void result(){
     cin >> n;
     for(int i=1; i<=n; i++){
         cin >> a[i];
@@ -38,5 +35,18 @@ int main(){
  
     }
     cout<<ans<<'\n';
+    
+}
+    
+int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
+    ll ts_case = 1;
+    //cin >> ts_case;
+    
+    while(ts_case--){
+        result();
+    }
     return 0;
 }
