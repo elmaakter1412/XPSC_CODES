@@ -28,7 +28,7 @@ void result(){
         }
     }
     else{
-        if(summ && 1){
+        if(summ & 1){
             cout<<"NO"<<'\n';
         }
         else{
