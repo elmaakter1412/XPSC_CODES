@@ -15,10 +15,10 @@ void result(){
         if(m <= 10){
             cout<<"Lower Double";
         }
-        else if(m >= 11 && m <= 15){
+        else if((m >= 11) && (m <= 15)){
             cout<<"Lower Single";
         }
-        else if(m >= 16 && m <= 25){
+        else if((m >= 16) && (m <= 25)){
             cout<<"Upper Double";
         }
         else if(m >= 26){
@@ -33,8 +33,8 @@ int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     
-    ll ts_case;
-    cin >> ts_case;
+    ll ts_case = 1;
+    //cin >> ts_case;
     
     while(ts_case--){
         result();

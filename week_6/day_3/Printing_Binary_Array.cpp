@@ -3,26 +3,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
-
     
 void result(){
-    ll n;
-    string a;
-    cin>>n>>a;
-    ll count = 0;
-    for(ll i=0; i<=n-1; i++){
-        if(a[i] == '1'){
-            count++;
+    ll n,x;
+    cin>>n;
+    
+    for(int i=0; i<n; i++){
+        cin>>x;
+        if(x==0){
+            cout<<1;
+        }
+        else{
+            cout<<0<<" ";
         }
     }
-    int minn = min(count, n-count);
-    if(minn%2){
-        cout<<"Zlatan"<<'\n';
-    }
-    else{
-        cout<<"Ramos"<<'\n';
-    }
-    return;
+    cout<<"\n";
+    
 }
     
 int main(){
@@ -36,4 +32,4 @@ int main(){
         result();
     }
     return 0;
-}
+} 
