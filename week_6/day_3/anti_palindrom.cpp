@@ -4,48 +4,55 @@
 using namespace std;
 typedef long long int ll;
 
-
-    
 void result(){
-    int n;
-    cin>>n;
-    int Odd = 0;
+    ll n;
+    string s;
 
-    map<char,int>freq;
-
-    set<char>st;
-
+    cin>>n>>s;
+    int freq[26] = {0};
+    ll count1 = 0, count2 = 0, count3 = 0;
     for(int i=0; i<n; i++){
-        char ch;
-        cin>>ch;
-        freq[ch]++;
-        st.insert(ch);
+        freq[s[i]-'a']++;
     }
-    if(n%2==0){
-        for(char ch='a'; ch<='z'; ch++){
-            if(freq[ch]%2!=0 ){
-                cout<<0<<"\n";
-                return;
+
+    if(n & 1){
+        for(int i=0; i<26; i++){
+            if(freq[i] != 0){
+                if(freq[i] & 1){
+                    count2++;
+                }
+                else{
+                    count3++;
+                }
             }
         }
-        cout<<1<<"\n";
-        return;
-    }
+        if(count2 > 1){
+            cout<<0<<'\n';
+        }
+        else if(count2 == 1 && count3 >= 1){
+            cout<<1<<"\n";
+        }
+        else if(count2 == 1 && count3 == 0){
+            cout<<2<<"\n";
+        }
 
-    if(st.size()==1){
-        cout<<2<<"\n";
-        return;
     }
-    for(char ch='a'; ch='z'; ch++){
-        if(freq[ch] & 1){
-            Odd++;
+    else{
+        for(int i=0; i<26; i++){
+            if(freq[i] != 0){
+                if(freq[i] & 1){
+                    count1++;
+                }
+            }
+        }
+        if(count1 >= 1){
+            cout<<0<<"\n";
+        }
+        else{
+            cout<<1<<'\n';
         }
     }
-    if(Odd>1){
-        cout<<0<<"\n";
-        return;
-    }
-    cout<<1<<"\n";
+    
     
 }
     
@@ -53,7 +60,7 @@ int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     
-    int ts_case;
+    ll ts_case = 1;
     cin >> ts_case;
     
     while(ts_case--){
