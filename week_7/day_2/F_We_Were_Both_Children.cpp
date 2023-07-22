@@ -3,24 +3,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
-const int M = 1e2 + 11;
-
-
     
 void result(){
-    int n;
+    ll n;
     cin>>n;
+    vector<ll>a(n+1);
+    vector<ll>b(n+1);
 
-    vector<ll>a(M);
+    for(int i=0; i<n; i++){
+        ll t;
+        cin>>t;
+        if(t<=n){
+            a[t]++;
+        }
+    }
+
     for(int i=1; i<=n; i++){
-        cin>>a[i];
+        for(int j=i; j<=n; j = j+i){
+            b[j] = b[j] + a[i];
+        }
     }
-    int solve = a[1];
-    for(int i=2; i<=n; i++){
-        solve = solve & a[i];
-    }
-    cout<<solve<<"\n";
-
+    cout<<(*max_element(b.begin(), b.end()))<<'\n';
     
 }
     

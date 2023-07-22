@@ -3,24 +3,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
-const int M = 1e2 + 11;
-
-
     
 void result(){
-    int n;
+    ll n, p=0;
     cin>>n;
 
-    vector<ll>a(M);
-    for(int i=1; i<=n; i++){
-        cin>>a[i];
-    }
-    int solve = a[1];
-    for(int i=2; i<=n; i++){
-        solve = solve & a[i];
-    }
-    cout<<solve<<"\n";
+    string str={'a','a','b','b'};
+    for(int i=0; i<n; i++){
+        cout<<str[p];
+        p++;
+        if(p==4){
+            p=0;
+        }
 
+    }
+    cout<<"\n";
+    
     
 }
     
@@ -29,7 +27,7 @@ int main(){
     cin.tie(0);
     
     ll ts_case = 1;
-    cin >> ts_case;
+    //cin >> ts_case;
     
     while(ts_case--){
         result();

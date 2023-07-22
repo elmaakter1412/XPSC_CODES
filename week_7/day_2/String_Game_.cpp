@@ -3,25 +3,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
-const int M = 1e2 + 11;
-
 
     
 void result(){
-    int n;
-    cin>>n;
-
-    vector<ll>a(M);
-    for(int i=1; i<=n; i++){
-        cin>>a[i];
+    ll n;
+    string a;
+    cin>>n>>a;
+    ll count = 0;
+    for(ll i=0; i<=n-1; i++){
+        if(a[i] == '1'){
+            count++;
+        }
     }
-    int solve = a[1];
-    for(int i=2; i<=n; i++){
-        solve = solve & a[i];
+    int minn = min(count, n-count);
+    if(minn%2){
+        cout<<"Zlatan"<<'\n';
     }
-    cout<<solve<<"\n";
-
-    
+    else{
+        cout<<"Ramos"<<'\n';
+    }
+    return;
 }
     
 int main(){

@@ -3,24 +3,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
-const int M = 1e2 + 11;
-
-
     
 void result(){
-    int n;
-    cin>>n;
+    int n,m;
+    cin>>n>>m;
 
-    vector<ll>a(M);
-    for(int i=1; i<=n; i++){
-        cin>>a[i];
+    ll total_score = 6  * 6 * m;
+    if(n <= total_score){
+        cout<<"YES"<<'\n';
     }
-    int solve = a[1];
-    for(int i=2; i<=n; i++){
-        solve = solve & a[i];
+    else{
+        cout<<"NO"<<'\n';
     }
-    cout<<solve<<"\n";
-
     
 }
     
@@ -28,7 +22,7 @@ int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     
-    ll ts_case = 1;
+    ll ts_case;
     cin >> ts_case;
     
     while(ts_case--){

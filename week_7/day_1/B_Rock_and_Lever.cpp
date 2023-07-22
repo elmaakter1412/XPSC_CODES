@@ -3,10 +3,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
-const ll n = 1e5;
+
 vector<ll>a(1000000+3);
     
 void result(){
+    ll n;
     cin>>n;
 
     
