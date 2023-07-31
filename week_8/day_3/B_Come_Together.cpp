@@ -5,24 +5,6 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    ll Xa,Xb,Xc,Ya,Yb,Yc;
-    cin>>Xa>>Xb>>Xc>>Ya>>Yb>>Yc;
-
-    Xb -= Xa;
-    Xc -= Xa;
-
-    Yb -= Ya;
-    Yc -= Ya;
-
-    ll solve = 1;
-    if(Xb*Xc > 0){
-        solve += min(abs(Xb), abs(Xc));
-    }
-    if(Yb*Yc > 0){
-        solve += min(abs(Yb), abs(Yc));
-    }
-    cout<<solve<<'\n';
-    
     
 }
     
@@ -34,6 +16,24 @@ int main(){
     cin >> ts_case;
     
     while(ts_case--){
+        int xa, ya, xb, yb, xc, yc;
+        cin >> xa >> ya >> xb >> yb >> xc >> yc;
+ 
+        xb -= xa;
+        yb -= ya;
+ 
+        xc -= xa;
+        yc -= ya;
+ 
+        int a = 0,b = 0;
+ 
+            if (xc * xb > 0)
+                a = min(abs(xc), abs(xb));
+ 
+            if (yc * yb > 0)
+                b = min(abs(yc), abs(yb));
+ 
+        cout << a + b + 1 << endl;
         result();
     }
     return 0;
