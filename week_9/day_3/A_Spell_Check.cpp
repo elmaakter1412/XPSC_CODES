@@ -5,13 +5,24 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    string str;
-    cin>>str;
-
-    string x = str;
-    reverse(x.begin(), x.end());
-    cout<<str+x<<'\n';
-    
+    int n;
+    cin>>n;
+ 
+    string s;
+    cin>>s;
+    if(n != 5){
+        cout<<"NO"<<"\n";
+        return;
+    }
+ 
+    string ss = "Timru";
+    sort(s.begin(), s.end());
+    if(ss == s){
+        cout<<"YES"<<"\n";
+    }
+    else{
+        cout<<"NO"<<"\n";
+    }
 }
     
 int main(){

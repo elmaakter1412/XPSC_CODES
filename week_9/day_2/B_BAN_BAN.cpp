@@ -22,7 +22,7 @@ int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     
-    ll ts_cas = 1;
+    ll ts_case = 1;
     cin >> ts_case;
     
     while(ts_case--){

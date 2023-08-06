@@ -5,12 +5,19 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    string str;
-    cin>>str;
+    int n;
+    cin>>n;
 
-    string x = str;
-    reverse(x.begin(), x.end());
-    cout<<str+x<<'\n';
+    vector<int>a(n);
+    int maxx = INT_MIN;
+    int minn = INT_MAX;
+
+    for(int i=0; i<n; i++){
+        cin>>a[i];
+        maxx = max(maxx, a[i]);
+        minn = min(minn, a[i]);
+    }
+    cout<<maxx-minn<<'\n';
     
 }
     
