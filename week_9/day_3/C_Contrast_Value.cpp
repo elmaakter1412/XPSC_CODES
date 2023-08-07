@@ -12,7 +12,7 @@ void result(){
     for(int i=0; i<n; i++){
         cin>>a[i];
     }
-    n = unique(a.begin(), a.end())-a.begin();
+    n = unique(a.begin(), a.end())- a.begin();
     ll solve = n;
     for(int i=0; i+2<n; i++){
         solve = solve - (a[i] < a[i+1] && a[i+1] < a[i+2]);
