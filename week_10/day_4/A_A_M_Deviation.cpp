@@ -9,7 +9,7 @@ void result(){
     cin>>x>>y>>z;
 
     ll p = (x+z-2*y);
-    ll t = p%3;
+    bool t = p%3;
     cout<<t<<'\n';
 
     
