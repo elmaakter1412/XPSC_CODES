@@ -3,29 +3,35 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
-vector<int>a(1e5);
+
+vector<ll>a(200010);
+vector<ll>b(200010);
     
 void result(){
-    int n;
+    ll n;
     cin>>n;
+
     for(int i=1; i<=n; i++){
         cin>>a[i];
     }
-    ll sum = 1;
     for(int i=1; i<=n; i++){
-        if((a[i]==0) && (a[i-1]==0) && (i>1)){
-            sum = -1;
-            break;
-
-        }
-        else if((a[i]==1) && (a[i-1]==1)){
-            sum = sum + 5;
-        }
-        else if((a[i]==1) && (a[i-1]==0)){
-            sum++;
-        }
+        cin>>b[i];
     }
-    cout<<sum<<'\n';
+    ll left = 1, right = n;
+    while(a[left] == b[left]){
+        left++;
+    }
+    while(a[right] == b[right]){
+        right--;
+    }
+
+    while(left>1 && b[left-1] <= b[left]){
+        left--;
+    }
+    while(right<n && b[right] <= b[right+1]){
+        right++;
+    }
+    cout<<left<<" "<<right<<'\n';
     
 }
     
