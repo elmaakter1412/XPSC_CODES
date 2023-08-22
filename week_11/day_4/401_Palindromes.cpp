@@ -1,8 +1,8 @@
-#include <iostream>
-#include <string>
-#include <unordered_map>
-
+//Author: elmaakter14120;
+    
+#include<bits/stdc++.h>
 using namespace std;
+typedef long long int ll;
 
 unordered_map<char, char> mirrorChars = {
     {'A', 'A'}, {'E', '3'}, {'H', 'H'}, {'I', 'I'}, {'J', 'L'},
