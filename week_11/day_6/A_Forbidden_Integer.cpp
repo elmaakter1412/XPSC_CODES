@@ -37,9 +37,8 @@ void result(){
             cout<<'\n';
             return;
         }
-         cout<<"NO"<<'\n';
     }
-    // cout<<"NO"<<'\n';
+    cout<<"NO"<<'\n';
 
     
 }
