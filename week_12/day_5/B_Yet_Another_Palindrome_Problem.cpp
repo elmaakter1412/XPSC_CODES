@@ -15,7 +15,7 @@ void result(){
     bool flag = false;
     for(int i=0; i<n-2; i++){
         for(int j=i+2; j<n; j++){
-            if(a[n] == a[j]){
+            if(a[i] == a[j]){
                 flag = true;
                 break;
             }
