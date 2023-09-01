@@ -15,9 +15,9 @@ void result(){
 		mp[x]++;
 	}
 	int ans=0;
-	for(int i=2; i<200; i++){
+	for(int i=2; i<=200; i++){
 		int result=0;
-		for(int j=1; j<i-1; j++){
+		for(int j=1; j<=i-1; j++){
 			result += min( mp[j],mp[i-j]);
 		}
 		ans=max(ans,result/2);
