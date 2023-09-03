@@ -22,7 +22,7 @@ void result(){
         if(visited[i]==0)
             m = i;
 
-    deque<int>dq;//(a.begin(),a.end());
+    deque<int>dq(a.begin(),a.end());
 
     for(int i=0; i<k; i++)
     {
