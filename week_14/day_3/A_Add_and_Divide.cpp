@@ -5,9 +5,9 @@ using namespace std;
 typedef long long int ll;
     
 void result(){
-    int x,y;
+    ll x,y;
     cin>>x>>y;
-    int ans,f=0;
+    ll ans,f=0;
     if(y==1){
         ans=1;
         y=2;
@@ -19,15 +19,15 @@ void result(){
        
        for(int i=y;i>0;i++){
         int s = x;
-        while(s>0){
-            s/=y;
+        while(s > 0){
+            s /= y;
             ans++;
             
         }
         if(min >= ans){
             min = ans;
         }
-         else{
+        else{
             break;
         }
         f++;
